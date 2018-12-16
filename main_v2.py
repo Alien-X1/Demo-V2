@@ -1,5 +1,7 @@
 # This file was created by Cal
 ''' Sources:
+https://www.pygame.org/docs/tut/newbieguide.html
+https://learn.zybooks.com/zybook/BOP002CozortFall2018
 KidsCanCode  Chris Bradfield
     jumpy and shmup
 Robert Chien
@@ -9,15 +11,33 @@ Mr.Cozort
 
 
 '''
-=========================Gameplay=========================
+======================Gameplay Ideas======================
 Hidden blocks to access otherwise out of game areas
 Trapped blocks to drop and kill you unexpectedly
 Powerups that give effects (random or otherwise)
 =========================Cosmetic=========================
+Player changes looks depending on how and where it is moving (4 images, 3 implemented)
+Multiple types of Trap and Immovable blocks depending on placement in map
+Custom Final flag image
+Custom Enemies, 2 varieties
+All masks listed at the very bottom of "settings_v2"
+Custom masks for everything other than the background
 ===========================Bugs===========================
+The player can phase through the traps and the ground and become one with the block
 ======================Gameplay_Fixes======================
-======================Cool Stuff=======================
-=====================Missing_Junk======================
+The player can phase up through the bottom of blocks to get on top of them
+FIXED: The player has working bottom collision to prevent phasing through the bottom of blocks
+The baddies randomly teleport back onto the stage after dying
+FIXED: If the baddies fall past Height, they are removed from the game
+Not all traps activat when you touch them if you are hitting another trap:
+FIXED: Touched traps are moved into a different group to prevent the player from getting confused about which block it is touching
+EDIT: Works most of the time but no longer functions when dealing with being stuck inside other blocks
+========================Cool_Stuff========================
+Powerups have 4 abilites: death, increasesd number of jumps, super-speed, and clear all abilites
+Trapped blocks that fall only when the player steps on them
+Hidden blocks with very slight outlines that only the player can step on
+Flag that kills you or gives you victory
+Modifiable map (as long as you watch the pixel measurements)
 '''
 
 
