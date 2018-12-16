@@ -270,7 +270,7 @@ class Game:
                 i.vel.x = 0
             for i in self.flags:
                 i.vel.x = 0
-        # Map scrolling
+        # Map scrolling, changes the velocities of all non-player objects
 
     def death(self):
         player_deathblow = pg.sprite.spritecollideany(self.gamer, self.baddies, False)
@@ -292,7 +292,7 @@ class Game:
             elif player_item_collect.type == 3:
                 self.gamer.max_vel = PLAYER_MAX_VEL
                 self.gamer.max_jumps = PLAYER_MAX_JUMPS
-            # removes the powerups and applies the abilities absed on the powerup number
+            # removes the powerups and applies the abilities based on the powerup number
         if player_flag_collect:
             if player_flag_collect.reality == "real":
                 self.playing = False
@@ -334,7 +334,7 @@ class Game:
         self.flags.draw(self.screen)
         # double buffer
         pg.display.flip()
-        # screen creation
+        # screen creation/drawing in everything
     
     def show_start_screen(self):
         keys = pg.key.get_pressed()

@@ -82,3 +82,4 @@ b_masks = [b1_mask,b2_mask]
 p_walk_right_masks = [p_walk_right_mask_1,p_walk_right_mask_2]
 p_walk_left_masks = [p_walk_left_mask_1,p_walk_left_mask_2]
 p_jump_masks = [p_jump_right_mask,p_jump_left_mask]
+#importing all the images for use in the game
